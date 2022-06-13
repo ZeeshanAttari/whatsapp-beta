@@ -7,7 +7,7 @@ const DATABASE_URL =
 		? './database.db'
 		: process.env.DATABASE_URL
 module.exports = {
-	VERSION: '3.1.2',
+	VERSION: '3.1.4',
 	SESSION_ID: (process.env.SESSION_ID || '').trim(),
 	DATABASE:
 		DATABASE_URL === './database.db'
@@ -39,4 +39,6 @@ module.exports = {
 	LANG: (process.env.LANGUAG || 'en').toLowerCase(),
 	WARN_LIMIT: process.env.WARN_LIMIT || 3,
 	FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
+	BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
+	DIS_BOT: process.env.DISABLE_BOT || 'null',
 }
